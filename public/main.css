@@ -1,0 +1,19 @@
+/* slick slider start  */
+.card {
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slick-slide {
+    padding: 10px;
+}
+.slick-prev:before,
+.slick-next:before {
+    color: purple;
+    font-size: 30px;
+}
+/* slick slider end  */
+
+.btn{
+    border-radius: 800px;
+}
