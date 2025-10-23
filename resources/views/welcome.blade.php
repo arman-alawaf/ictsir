@@ -121,21 +121,31 @@
 .notice-marquee:hover .notice-track {
     animation-play-state: paused;
 }
+
+
+
 </style>
+
 
     @php
         $app->youtube_embed = preg_replace(
-    "/^.*(?:youtu\.be\/|v=)([a-zA-Z0-9_-]+).*$/",
-    "https://www.youtube.com/embed/$1",
-    $app->youtube
-);
-
+            "/^.*(?:youtu\.be\/|v=)([a-zA-Z0-9_-]+).*$/",
+            "https://www.youtube.com/embed/$1",
+            $app->youtube
+        );
     @endphp
+
 <section>
-    <div class="container py-5">
+    <style>
+        .banner-youtube{ width: 100%; height: 500px; }
+        @media only screen and (max-width: 600px) {
+            .banner-youtube{ height: 250px; }
+        }
+    </style>
+    <div class="container py-3">
         <div class="row justify-content-center">
-            <div class="col-8">
-                <iframe width="100%" height="400"
+            <div class="col-md-12">
+                <iframe class="banner-youtube"
                     src="{{ $app->youtube_embed }}"
                     title="YouTube video player"
                     frameborder="0"

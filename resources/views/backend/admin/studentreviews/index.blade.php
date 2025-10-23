@@ -68,7 +68,8 @@
                 <th scope="col">Name</th>
                 <th scope="col">Image</th>
                 <th scope="col">Review</th>
-                <th scope="col">Varsity</th>
+                <th scope="col">College</th>
+                <th scope="col">University</th>
                 <th scope="col">Subject</th>
                 <th scope="col">Action</th> 
               </tr>
@@ -80,6 +81,7 @@
                 <td class="nowrap">{{$data->name}}</td>
                 <td class="nowrap"><img style="height:60px;width:auto;" src="{{asset('images/studentreviews/'.$data->image)}}" alt="{{$data->title}}"></td>
                 <td class="nowrap">{{$data->review}}</td>
+                <td class="nowrap">{{$data->college}}</td>
                 <td class="nowrap">{{$data->varsity}}</td>
                 <td class="nowrap">{{$data->subject}}</td>
                 <td class="nowrap">
