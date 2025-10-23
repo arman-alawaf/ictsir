@@ -24,6 +24,7 @@ class StudentReviewController extends Controller
             $data = new StudentReview;        
             $data->name = $request->name; 
             $data->review = $request->review; 
+            $data->college = $request->college; 
             $data->varsity = $request->varsity; 
             $data->subject = $request->subject;  
             if($request->hasFile('image')) {
@@ -53,6 +54,7 @@ class StudentReviewController extends Controller
             $data = StudentReview::findOrFail($id);
             $data->name = $request->name;
             $data->review = $request->review; 
+            $data->college = $request->college;
             $data->varsity = $request->varsity; 
             $data->subject = $request->subject; 
             if($request->hasFile('image')) {

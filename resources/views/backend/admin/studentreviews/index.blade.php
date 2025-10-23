@@ -37,7 +37,11 @@
                       <input type="text" name="review" id="review" class="form-control my-2" required>
                   </div>
                   <div class="col-12 mb-3">
-                      <label for="varsity">Varsity <span class="text-danger fw-bold">*</span></label>
+                      <label for="college">College <span class="text-danger fw-bold">*</span></label>
+                      <input type="text" name="college" id="college" class="form-control my-2" required>
+                  </div>
+                  <div class="col-12 mb-3">
+                      <label for="varsity">University <span class="text-danger fw-bold">*</span></label>
                       <input type="text" name="varsity" id="varsity" class="form-control my-2" required>
                   </div>
                   <div class="col-12 mb-3">
@@ -110,7 +114,11 @@
                               <input type="text" name="review" value="{{$data->review}}" id="review" class="form-control my-2" required>
                           </div>
                           <div class="col-12 mb-3">
-                              <label for="varsity">Varsity <span class="text-danger fw-bold">*</span></label>
+                              <label for="college">College <span class="text-danger fw-bold">*</span></label>
+                              <input type="text" name="college" value="{{$data->college}}" id="college" class="form-control my-2" required>
+                          </div>
+                          <div class="col-12 mb-3">
+                              <label for="varsity">University <span class="text-danger fw-bold">*</span></label>
                               <input type="text" name="varsity" value="{{$data->varsity}}" id="varsity" class="form-control my-2" required>
                           </div>
                           <div class="col-12 mb-3">

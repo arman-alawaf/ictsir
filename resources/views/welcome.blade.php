@@ -157,7 +157,13 @@
                 <div class="slider">
                 @foreach($reviews as $review)
                 <div class="card">
-                    <img src="{{asset('images/studentreviews/'.$review->image)}}" class="card-img-top" alt="image">
+                    <div style="height: 250px;width:100%; 
+                    background-image:url({{asset('images/studentreviews/'.$review->image)}});
+                    background-position:center;
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    "></div>
+                    {{-- <img style="height: " src="" class="card-img-top" alt="image"> --}}
                     <div class="card-body">
                     <h5 class="card-title">{{$review->name}}</h5>
                     <p class="card-text mb-0">{{$review->varsity}}</p>

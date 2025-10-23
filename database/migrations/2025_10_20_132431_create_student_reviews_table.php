@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('image')->nullable();
             $table->text('review')->nullable();
+            $table->string('college')->nullable();
             $table->string('varsity')->nullable();
             $table->string('subject')->nullable();
             $table->timestamps();
