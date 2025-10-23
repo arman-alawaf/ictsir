@@ -64,7 +64,8 @@
         </div>
     </div>
     </nav>
-
+    
+@if($notices->count() > 0)
 <section>
     <div class="container-fluid">
         <div class="row">
@@ -80,6 +81,7 @@
         </div>
     </div>
 </section>
+@endif
 
 <style>
 .notice-marquee {
