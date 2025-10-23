@@ -28,43 +28,43 @@
 <body>
 
     <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-    <div class="container">
-        <a class="navbar-brand" href="{{url('/')}}">
-            @if($app->logo)
-                <img src="{{asset('images/apps/'.$app->logo)}}" alt="{{$app->title}}" style="height: 45px;width:auto;">
-            @else
-                {{$app->title}}
-            @endif
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
-            </li>
-            {{-- <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-            </li> --}}
-            @Auth
-            <li class="nav-item">
-            <a class="nav-link" href="{{url('dashboard')}}">Dashboard</a>
-            </li>
-            @else
-            <li class="nav-item">
-            <a class="nav-link" href="{{url('login')}}">Login</a>
-            </li>
-            @endauth
-            
-        </ul>
-        <div class="d-flex">
-            <a  class="btn btn-primary">Get Started</a>
+        <div class="container">
+            <a class="navbar-brand" href="{{url('/')}}">
+                @if($app->logo)
+                    <img src="{{asset('images/apps/'.$app->logo)}}" alt="{{$app->title}}" style="height: 45px;width:auto;">
+                @else
+                    {{$app->title}}
+                @endif
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
+                </li>
+                {{-- <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+                </li> --}}
+                @Auth
+                <li class="nav-item">
+                <a class="nav-link" href="{{url('dashboard')}}">Dashboard</a>
+                </li>
+                @else
+                <li class="nav-item">
+                <a class="nav-link" href="{{url('login')}}">Login</a>
+                </li>
+                @endauth
+                
+            </ul>
+            <div class="d-flex">
+                <a  class="btn btn-primary">Get Started</a>
+            </div>
+            </div>
         </div>
-        </div>
-    </div>
     </nav>
-    
+
 @if($notices->count() > 0)
 <section>
     <div class="container-fluid">
@@ -84,48 +84,40 @@
 @endif
 
 <style>
-.notice-marquee {
-    overflow: hidden;
-    white-space: nowrap;
-    position: relative;
-    padding: 10px 0; 
-}
-
-.notice-track {
-    display: inline-block;
-    animation: scroll-left 20s linear infinite;
-}
-
-.notice-item {
-    display: inline-block;
-    margin-right: 50px;
-    font-weight: 500;
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.notice-item:hover {
-    color: #0056b3;
-}
-
-/* Animation */
-@keyframes scroll-left {
-    0% {
-        transform: translateX(100%);
+    .notice-marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        padding: 10px 0; 
     }
-    100% {
-        transform: translateX(-100%);
+    .notice-track {
+        display: inline-block;
+        animation: scroll-left 20s linear infinite;
     }
-}
-
-/* Pause animation on hover */
-.notice-marquee:hover .notice-track {
-    animation-play-state: paused;
-}
-
-
-
+    .notice-item {
+        display: inline-block;
+        margin-right: 50px;
+        font-weight: 500;
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    .notice-item:hover {
+        color: #0056b3;
+    }
+    /* Animation */
+    @keyframes scroll-left {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    /* Pause animation on hover */
+    .notice-marquee:hover .notice-track {
+        animation-play-state: paused;
+    }
 </style>
 
 
@@ -162,7 +154,40 @@
 
 
 
-    <section>
+    <section id="chapters">
+        <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="slider">
+                
+                <a href="#" class="card">
+                    <div class="card-body text-center">
+                    <h5 class="card-title">Chapter 1</h5>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-body text-center">
+                    <h5 class="card-title">Chapter 2</h5>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-body text-center">
+                    <h5 class="card-title">Chapter 3</h5>
+                    </div>
+                </a>
+                <a href="#" class="card">
+                    <div class="card-body text-center">
+                    <h5 class="card-title">Chapter 4</h5>
+                    </div>
+                </a>
+                
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section id="reviews">
         <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-10">
